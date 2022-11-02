@@ -1,0 +1,1 @@
+module.exports = __webpack_public_path__ + "static/js/db.b9ce6f1b.chunk.worker.js"

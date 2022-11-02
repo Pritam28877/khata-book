@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="theme-color" content="#f7f7f7" />
+    <meta name="description" content="Use Khatabook on your browser. Here’s Khatabook for Web, login with your mobile number & OTP to get started! 100% FREE" />
+    <meta name="facebook-domain-verification" content="dm177bqsjfg8x8jfia3gi4h8h43duh" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" lazyload/>
+    <link href="/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Khatabook | Merchant Web | Web Version</title>
+    <script async>
+        function redirectMobileDevices() {
+            if (bowser) {
+                const o = "https://app.khatabook.com";
+                "desktop" !== bowser.getParser(navigator.appVersion).getPlatformType() && (window.location.href = o)
+            }
+        }
+
+        function redirectWebAppToWeb() {
+            console.log("https://web.khatabook.com", !0), "https://web.khatabook.com" !== window.location.origin && (window.location.href = "https://web.khatabook.com")
+        }
+        redirectWebAppToWeb()
+    </script>
+    <script type="text/javascript" defer="defer">
+        var clevertap = {
+            event: [],
+            profile: [],
+            account: [],
+            onUserLogin: [],
+            notifications: [],
+            privacy: []
+        };
+        const CLEVERTAP_ACCOUNT_ID = "R9Z-4RW-855Z";
+        clevertap.account.push({
+                id: "R9Z-4RW-855Z"
+            }), clevertap.privacy.push({
+                optOut: !1
+            }), clevertap.privacy.push({
+                useIP: !1
+            }),
+            function() {
+                var t = document.createElement("script");
+                t.type = "text/javascript", t.async = !0, t.src = ("https:" == document.location.protocol ? "https://d2r1yp2w7bby2u.cloudfront.net" : "http://static.clevertap.com") + "/js/a.js?v=0";
+                var e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(t, e)
+            }()
+    </script>
+    <script defer="defer" src="https://unpkg.com/bowser@2.8.1/es5.js" onload="redirectMobileDevices()"></script>
+</head>
+
+<body class="base-not-loaded"><noscript><h2 style="padding:20px;font-family:Arial,Helvetica,sans-serif">Please enable Javascript</h2></noscript>
+    <div id="root"></div>
+    <div id="portal-root"></div>
+    <div id="kb-loader">
+        <div class="spinner"><svg class="kb-spinner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="45"></circle></svg></div>
+    </div>
+    <style>
+        #kb-loader {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0
+        }
+
+        #kb-loader .spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            margin-left: -25px;
+            z-index: 6;
+            text-align: center
+        }
+
+        #kb-loader .spinner .kb-spinner {
+            animation: 2s linear infinite kb-svg-animation;
+            max-width: 40px;
+            padding: 5px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #ededed;
+            box-sizing: border-box
+        }
+
+        #kb-loader .spinner .kb-spinner circle {
+            animation: 1.4s ease-in-out infinite both kb-circle-animation;
+            display: block;
+            fill: transparent;
+            stroke: #1b6cce;
+            stroke-linecap: round;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 280;
+            stroke-width: 8px;
+            transform-origin: 50% 50%
+        }
+
+        @keyframes kb-svg-animation {
+            0% {
+                transform: rotateZ(0)
+            }
+            100% {
+                transform: rotateZ(360deg)
+            }
+        }
+
+        @keyframes kb-circle-animation {
+            0%,
+            25% {
+                stroke-dashoffset: 280;
+                transform: rotate(0)
+            }
+            50%,
+            75% {
+                stroke-dashoffset: 75;
+                transform: rotate(45deg)
+            }
+            100% {
+                stroke-dashoffset: 280;
+                transform: rotate(360deg)
+            }
+        }
+
+        .base-not-loaded {
+            background-color: #f7f7f7
+        }
+
+        .base-not-loaded #kb-loader {
+            display: flex
+        }
+    </style>
+    <script type="text/Javascript" defer="defer" async>window.dataLayer=[],window.dataLayer.push({"gtm.start":(new Date).getTime(),event:"gtm.js"})</script>
+    <script>
+        ! function(e) {
+            function t(t) {
+                for (var r, a, d = t[0], f = t[1], i = t[2], s = 0, b = []; s < d.length; s++) a = d[s], Object.prototype.hasOwnProperty.call(c, a) && c[a] && b.push(c[a][0]), c[a] = 0;
+                for (r in f) Object.prototype.hasOwnProperty.call(f, r) && (e[r] = f[r]);
+                for (u && u(t); b.length;) b.shift()();
+                return o.push.apply(o, i || []), n()
+            }
+
+            function n() {
+                for (var e, t = 0; t < o.length; t++) {
+                    for (var n = o[t], r = !0, a = 1; a < n.length; a++) {
+                        var f = n[a];
+                        0 !== c[f] && (r = !1)
+                    }
+                    r && (o.splice(t--, 1), e = d(d.s = n[0]))
+                }
+                return e
+            }
+            var r = {},
+                a = {
+                    33: 0
+                },
+                c = {
+                    33: 0
+                },
+                o = [];
+
+            function d(t) {
+                if (r[t]) return r[t].exports;
+                var n = r[t] = {
+                    i: t,
+                    l: !1,
+                    exports: {}
+                };
+                return e[t].call(n.exports, n, n.exports, d), n.l = !0, n.exports
+            }
+            d.e = function(e) {
+                var t = [];
+                a[e] ? t.push(a[e]) : 0 !== a[e] && {
+                    43: 1
+                }[e] && t.push(a[e] = new Promise((function(t, n) {
+                    for (var r = "static/css/" + ({
+                            7: "add-business",
+                            8: "add-customer",
+                            9: "as-i18n",
+                            10: "background-sync",
+                            11: "bn-i18n",
+                            12: "book",
+                            13: "contact",
+                            14: "create-khata",
+                            15: "dweb-book",
+                            16: "dweb-customer",
+                            17: "dweb-money",
+                            18: "dweb-onboarding",
+                            19: "dweb-transaction-contact",
+                            20: "dweb-transaction-form",
+                            21: "dweb-transactions",
+                            22: "en_US-i18n",
+                            23: "gu-i18n",
+                            24: "hi-i18n",
+                            25: "kn-i18n",
+                            26: "logout",
+                            28: "ml-i18n",
+                            29: "mr-i18n",
+                            30: "or-i18n",
+                            31: "pa-i18n",
+                            32: "profile",
+                            34: "settings",
+                            35: "sync-data",
+                            36: "ta-i18n",
+                            37: "te-i18n",
+                            38: "transaction-detail",
+                            39: "transaction-form",
+                            40: "transactions"
+                        }[e] || e) + "." + {
+                            0: "31d6cfe0",
+                            1: "31d6cfe0",
+                            2: "31d6cfe0",
+                            3: "31d6cfe0",
+                            4: "31d6cfe0",
+                            5: "31d6cfe0",
+                            6: "31d6cfe0",
+                            7: "31d6cfe0",
+                            8: "31d6cfe0",
+                            9: "31d6cfe0",
+                            10: "31d6cfe0",
+                            11: "31d6cfe0",
+                            12: "31d6cfe0",
+                            13: "31d6cfe0",
+                            14: "31d6cfe0",
+                            15: "31d6cfe0",
+                            16: "31d6cfe0",
+                            17: "31d6cfe0",
+                            18: "31d6cfe0",
+                            19: "31d6cfe0",
+                            20: "31d6cfe0",
+                            21: "31d6cfe0",
+                            22: "31d6cfe0",
+                            23: "31d6cfe0",
+                            24: "31d6cfe0",
+                            25: "31d6cfe0",
+                            26: "31d6cfe0",
+                            28: "31d6cfe0",
+                            29: "31d6cfe0",
+                            30: "31d6cfe0",
+                            31: "31d6cfe0",
+                            32: "31d6cfe0",
+                            34: "31d6cfe0",
+                            35: "31d6cfe0",
+                            36: "31d6cfe0",
+                            37: "31d6cfe0",
+                            38: "31d6cfe0",
+                            39: "31d6cfe0",
+                            40: "31d6cfe0",
+                            42: "31d6cfe0",
+                            43: "51457ed1",
+                            44: "31d6cfe0",
+                            45: "31d6cfe0",
+                            46: "31d6cfe0",
+                            47: "31d6cfe0",
+                            48: "31d6cfe0",
+                            49: "31d6cfe0",
+                            50: "31d6cfe0"
+                        }[e] + ".chunk.css", c = d.p + r, o = document.getElementsByTagName("link"), f = 0; f < o.length; f++) {
+                        var i = (u = o[f]).getAttribute("data-href") || u.getAttribute("href");
+                        if ("stylesheet" === u.rel && (i === r || i === c)) return t()
+                    }
+                    var s = document.getElementsByTagName("style");
+                    for (f = 0; f < s.length; f++) {
+                        var u;
+                        if ((i = (u = s[f]).getAttribute("data-href")) === r || i === c) return t()
+                    }
+                    var b = document.createElement("link");
+                    b.rel = "stylesheet", b.type = "text/css", b.onload = t, b.onerror = function(t) {
+                        var r = t && t.target && t.target.src || c,
+                            o = new Error("Loading CSS chunk " + e + " failed.\n(" + r + ")");
+                        o.code = "CSS_CHUNK_LOAD_FAILED", o.request = r, delete a[e], b.parentNode.removeChild(b), n(o)
+                    }, b.href = c, document.getElementsByTagName("head")[0].appendChild(b)
+                })).then((function() {
+                    a[e] = 0
+                })));
+                var n = c[e];
+                if (0 !== n)
+                    if (n) t.push(n[2]);
+                    else {
+                        var r = new Promise((function(t, r) {
+                            n = c[e] = [t, r]
+                        }));
+                        t.push(n[2] = r);
+                        var o, f = document.createElement("script");
+                        f.charset = "utf-8", f.timeout = 120, d.nc && f.setAttribute("nonce", d.nc), f.src = function(e) {
+                            return d.p + "static/js/" + ({
+                                7: "add-business",
+                                8: "add-customer",
+                                9: "as-i18n",
+                                10: "background-sync",
+                                11: "bn-i18n",
+                                12: "book",
+                                13: "contact",
+                                14: "create-khata",
+                                15: "dweb-book",
+                                16: "dweb-customer",
+                                17: "dweb-money",
+                                18: "dweb-onboarding",
+                                19: "dweb-transaction-contact",
+                                20: "dweb-transaction-form",
+                                21: "dweb-transactions",
+                                22: "en_US-i18n",
+                                23: "gu-i18n",
+                                24: "hi-i18n",
+                                25: "kn-i18n",
+                                26: "logout",
+                                28: "ml-i18n",
+                                29: "mr-i18n",
+                                30: "or-i18n",
+                                31: "pa-i18n",
+                                32: "profile",
+                                34: "settings",
+                                35: "sync-data",
+                                36: "ta-i18n",
+                                37: "te-i18n",
+                                38: "transaction-detail",
+                                39: "transaction-form",
+                                40: "transactions"
+                            }[e] || e) + "." + {
+                                0: "5b14beb5",
+                                1: "6e155cbe",
+                                2: "e71e369b",
+                                3: "db6f62b9",
+                                4: "2f88f83b",
+                                5: "b31c8665",
+                                6: "d3d2b3f3",
+                                7: "59ae9597",
+                                8: "9947d47e",
+                                9: "ea9ff53c",
+                                10: "0bfd4e8b",
+                                11: "0adc0347",
+                                12: "c30b6254",
+                                13: "5e0de23e",
+                                14: "d434f1e0",
+                                15: "00bd9361",
+                                16: "92061d1e",
+                                17: "3f75f046",
+                                18: "5b572be0",
+                                19: "b3783589",
+                                20: "65f14522",
+                                21: "eacbda55",
+                                22: "daeaa381",
+                                23: "3fb5f5a1",
+                                24: "cb26d397",
+                                25: "113d771d",
+                                26: "44dbda7f",
+                                28: "83a63405",
+                                29: "07f55756",
+                                30: "65d31e4b",
+                                31: "a448a66d",
+                                32: "abcf32c5",
+                                34: "c82d090f",
+                                35: "7d81c855",
+                                36: "959d7943",
+                                37: "3f7a1aab",
+                                38: "eb688961",
+                                39: "9dc799b9",
+                                40: "c6554e68",
+                                42: "21f225c1",
+                                43: "00c32aad",
+                                44: "9cf02261",
+                                45: "5844604f",
+                                46: "6ea59819",
+                                47: "faa8a79a",
+                                48: "be9e38e9",
+                                49: "a52d4490",
+                                50: "0d4994d9"
+                            }[e] + ".chunk.js"
+                        }(e);
+                        var i = new Error;
+                        o = function(t) {
+                            f.onerror = f.onload = null, clearTimeout(s);
+                            var n = c[e];
+                            if (0 !== n) {
+                                if (n) {
+                                    var r = t && ("load" === t.type ? "missing" : t.type),
+                                        a = t && t.target && t.target.src;
+                                    i.message = "Loading chunk " + e + " failed.\n(" + r + ": " + a + ")", i.name = "ChunkLoadError", i.type = r, i.request = a, n[1](i)
+                                }
+                                c[e] = void 0
+                            }
+                        };
+                        var s = setTimeout((function() {
+                            o({
+                                type: "timeout",
+                                target: f
+                            })
+                        }), 12e4);
+                        f.onerror = f.onload = o, document.head.appendChild(f)
+                    }
+                return Promise.all(t)
+            }, d.m = e, d.c = r, d.d = function(e, t, n) {
+                d.o(e, t) || Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: n
+                })
+            }, d.r = function(e) {
+                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                    value: "Module"
+                }), Object.defineProperty(e, "__esModule", {
+                    value: !0
+                })
+            }, d.t = function(e, t) {
+                if (1 & t && (e = d(e)), 8 & t) return e;
+                if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+                var n = Object.create(null);
+                if (d.r(n), Object.defineProperty(n, "default", {
+                        enumerable: !0,
+                        value: e
+                    }), 2 & t && "string" != typeof e)
+                    for (var r in e) d.d(n, r, function(t) {
+                        return e[t]
+                    }.bind(null, r));
+                return n
+            }, d.n = function(e) {
+                var t = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return d.d(t, "a", t), t
+            }, d.o = function(e, t) {
+                return Object.prototype.hasOwnProperty.call(e, t)
+            }, d.p = "/", d.oe = function(e) {
+                throw console.error(e), e
+            };
+            var f = this.webpackJsonpkhatabook = this.webpackJsonpkhatabook || [],
+                i = f.push.bind(f);
+            f.push = t, f = f.slice();
+            for (var s = 0; s < f.length; s++) t(f[s]);
+            var u = i;
+            n()
+        }([])
+    </script>
+    <script src="/static/js/41.ff774506.chunk.js"></script>
+    <script src="/static/js/main.02e5efe0.chunk.js"></script>
+</body>
+
+</html>

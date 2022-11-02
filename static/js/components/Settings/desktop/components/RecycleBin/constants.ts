@@ -1,0 +1,5 @@
+export const LIST_TYPES = {
+  ENTRIES: 'ENTRIES',
+  KHATA: 'KHATA',
+  CUSTOMERS: 'CUSTOMERS',
+};
